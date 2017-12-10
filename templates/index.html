@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Resources
+{% endblock %}
+
+{% block main %}
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Number</th>
+                <th>Address</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resource in resources %}
+                <tr>
+                    <td>{{ resource.name }}</td>
+                    <td>{{ resource.description }}</td>
+                    <td>{{ resource.number }}</td>
+                    <td>{{ resource.address }}</td>
+                    <td><a href="{{ resource.website }}">{{ resource.website }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+{% endblock %}

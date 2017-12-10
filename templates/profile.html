@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Profile
+{% endblock %}
+
+{% block main %}
+    <div class="col">
+        <form action="/profile" enctype="multipart/form-data" method="post">
+            <h2>User Profile</h2>
+            <h4>(This information is completely confidential)</h4>
+            <br>
+            <p>1. What is your gender?</p>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+            <p>2. How old are you?</p>
+            <input type="number" name="age" min="1">
+            <p>3. With which ethnicities/nationalities do you identify? (Mark all that apply)</p>
+            <input type="checkbox" name="ethnicity1" value="black"> Black<br>
+            <input type="checkbox" name="ethnicity2" value="Hispanic"> Hispanic<br>
+            <input type="checkbox" name="ethnicity3" value="Ethiopian"> Ethiopian<br>
+            <input type="checkbox" name="ethnicity4" value="Asian"> Asian<br>
+            <input type="checkbox" name="ethnicity5" value="Haitian"> Haitian<br>
+            <input type="checkbox" name="ethnicity6" value="Chinese"> Chinese<br>
+            <input type="checkbox" name="ethnicity7" value="Portuguese"> Portuguese<br>
+            <input type="checkbox" name="ethnicity8" value="Somalian"> Somalian<br>
+            <input type="checkbox" name="ethnicity9" value="Vietnamese"> Vietnamese<br>
+            <input type="checkbox" name="ethnicity10" value="other"> Other
+            <p>4. Have you recently immigrated to the United States?</p>
+            <input type="radio" name="immigrant" value="yes"> Yes<br>
+            <input type="radio" name="immigrant" value="no"> No<br>
+            <p>5. Do you need a language translator?</p>
+            <input type="radio" name="translator" value="yes"> Yes<br>
+            <input type="radio" name="translator" value="no"> No<br>
+            <p>6. How would you consider your family's annual income level?</p>
+            <input type="radio" name="income" value="low"> Low<br>
+            <input type="radio" name="income" value="moderate"> Moderate<br>
+            <input type="radio" name="income" value="high"> High
+            <p>7. Do you have a regular place to sleep at night?</p>
+            <input type="radio" name="homeless" value="no"> Yes<br>
+            <input type="radio" name="homeless" value="yes"> No<br>
+            <p>8. Is your family currently transitioning between housed and homeless?</p>
+            <input type="radio" name="transition" value="Housing"> Yes<br>
+            <input type="radio" name="transition" value="no"> No<br>
+            <p>9. Do you need assistance with heating, fuel, and/or utilities?</p>
+            <input type="radio" name="utility" value="Utility"> Yes<br>
+            <input type="radio" name="utility" value="no"> No<br>
+            <p>10. Does your family have a steady supply of nutritious foods?</p>
+            <input type="radio" name="food" value="True"> Yes<br>
+            <input type="radio" name="food" value="Food"> No<br>
+            <p>11. Do you have a disability?</p>
+            <input type="radio" name="disability" value="yes"> Yes<br>
+            <input type="radio" name="disability" value="false"> No<br>
+            <p>12. Are you hard of hearing?</p>
+            <input type="radio" name="deaf" value="yes"> Yes<br>
+            <input type="radio" name="deaf" value="no"> No<br>
+            <p>13. Do you or your family members require assistance with clothing?</p>
+            <input type="radio" name="clothes" value="Clothing"> Yes<br>
+            <input type="radio" name="clothes" value="False"> No<br>
+            <p>14. Do you have any children? (If you're under 18, you can answer the following questions about yourself)</p>
+            <input type="radio" name="children" value="Parenting"> Yes<br>
+            <input type="radio" name="children" value="False"> No<br>
+            <p>15. Are your children 18 or younger?</p>
+            <input type="radio" name="child_age" value="Recreation"> Yes<br>
+            <input type="radio" name="child_age" value="False"> No<br>
+            <p>16. Are any of your children infants or toddlers?</p>
+            <input type="radio" name="baby" value="True"> Yes<br>
+            <input type="radio" name="baby" value="False"> No<br>
+            <p>17. Do you have any children who are in elementary or middle school?</p>
+            <input type="radio" name="elementary" value="Elementary Education"> Yes<br>
+            <input type="radio" name="elementary" value="False"> No<br>
+            <p>18. Do you have any children who are in high school?</p>
+            <input type="radio" name="college" value="College"> Yes<br>
+            <input type="radio" name="college" value="False"> No<br>
+            <p>19. Do any of your children have a disability?</p>
+            <input type="radio" name="child_dis" value="child"> Yes<br>
+            <input type="radio" name="child_dis" value="False"> No<br>
+            <p>20. Is your child a patient at Boston Children's Hospital?</p>
+            <input type="radio" name="bch" value="True"> Yes<br>
+            <input type="radio" name="bch" value="False"> No<br>
+            <p>21. Are your children underinsured?</p>
+            <input type="radio" name="child_ins" value="True"> Yes<br>
+            <input type="radio" name="child_ins" value="False"> No<br>
+            <p>22. Are you uninsured?</p>
+            <input type="radio" name="uninsured" value="Health Insurance"> Yes<br>
+            <input type="radio" name="uninsured" value="False"> No<br>
+            <p>23. Looking for state-based insured?</p>
+            <input type="radio" name="state_ins" value="True"> Yes<br>
+            <input type="radio" name="state_ins" value="False"> No<br>
+            <p>24. Need help with insurance applications?</p>
+            <input type="radio" name="ins_app" value="True"> Yes<br>
+            <input type="radio" name="ins_app" value="False"> No<br>
+            <p>25. Interested in medication assistance services?</p>
+            <input type="radio" name="meds" value="Prescription Drugs"> Yes<br>
+            <input type="radio" name="meds" value="False"> No<br>
+            <p>26. Do you or a loved one suffer from drug abuse?</p>
+            <input type="radio" name="drugs" value="Mental Health"> Yes<br>
+            <input type="radio" name="drugs" value="False"> No<br>
+            <p>27. Do you or a loved one suffer from mental illness?</p>
+            <input type="radio" name="mental" value="Mental Health"> Yes<br>
+            <input type="radio" name="mental" value="False"> No<br>
+            <p>28. Have you or your loved ones been affected by violent crime?</p>
+            <input type="radio" name="violence" value="Violence"> Yes<br>
+            <input type="radio" name="violence" value="False"> No<br>
+            <p>29. Do you require legal help?</p>
+            <input type="radio" name="law" value="Legal"> Yes<br>
+            <input type="radio" name="law" value="False"> No<br>
+            <p>30. In search of job?</p>
+            <input type="radio" name="job" value="Employment"> Yes<br>
+            <input type="radio" name="job" value="False"> No<br>
+            <p>31. Are you interested in continuing your education?</p>
+            <input type="radio" name="edu" value="Adult Education"> Yes<br>
+            <input type="radio" name="edu" value="False"> No<br>
+            <br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+nav{
+    background-color: #fff95b;
+}
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    background-color: black;
+}
+
+/* colors for brand */
+nav .navbar-brand .yellow
+{
+    color: #fff95b;
+    background-color: black;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+
+    background-color: black;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    background-color: black;
+}
+
+/* remove padding within column */
+.col
+{
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: black;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+
+td .a:nth-child(odd) {
+    color: black;
+}
+
+table{
+    background-color: #3f3f3f;
+    color: #fff95b;
+    width: 100%;
+    text-align: center;
+}

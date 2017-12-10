@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Forum
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <td><a href="{{ url_for('thread', post_id=post.post_id) }}">{{ post.topic }}</a></td>
+                    <td>{{ post.date_time }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

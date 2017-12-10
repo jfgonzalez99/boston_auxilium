@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Thread
+{% endblock %}
+
+{% block main %}
+    {% for result in results %}
+    <h2>{{ result.topic }}</h2>
+    <h3>{{ result.question }}</h3>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Responses</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comment in comments %}
+                <tr>
+                    <td>{{ comment.content }}</td>
+                    <td>{{ comment.comment_time }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <form action="/thread/{{ post_id }}/" enctype="multipart/form-data" method="post">
+        <textarea name="response" cols="40" rows="5" placeholder="Respond to this concern here"></textarea>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit" name="respond">Respond</button>
+    </form>
+{% endblock %}

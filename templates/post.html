@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Post
+{% endblock %}
+
+{% block main %}
+    <form action="/post" method="post">
+        <h1>Have any questions or concerns?</h1>
+        <br>
+        <input type="text" name="topic" placeholder="type topic of post here" size="71">
+        <br>
+        <br>
+        <textarea name="question" placeholder="type question/concern here" cols="70" rows="5"></textarea>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}
