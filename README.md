@@ -1,4 +1,4 @@
-# Welcome to Auxillium
+# Welcome to Boston Auxillium
 
 A website that connects users with community
 resources in the Boston area catered just for them. In order to get
