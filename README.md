@@ -1,4 +1,6 @@
-Welcome to Auxillium: a website that connects users with community
+# Welcome to Auxillium
+
+A website that connects users with community
 resources in the Boston area catered just for them. In order to get
 the website started make sure you start by typing "cd project" into
 your control terminal and performflask run. When you open the website,
